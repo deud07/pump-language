@@ -1,0 +1,4 @@
+push test1 #23
+push test2 #47
+add test1 test2 {final}
+stp final

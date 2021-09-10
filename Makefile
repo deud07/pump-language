@@ -9,10 +9,10 @@ EXEC = pump
 all: ${SRC} ${OBJ} ${EXEC}
 
 ${EXEC}: ${OBJ}
-	${CC} ${LDFLAGS} $^ -o $0
+	${CC} ${LDFLAGS} $^ -o $@
 
 %.o: %.c ${HDR}
-	${CC} ${CFLAGS} $< -o $0
+	${CC} ${CFLAGS} $< -o $@
 
 clean:
 	del *.o ${EXEC}

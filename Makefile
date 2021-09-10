@@ -10,3 +10,9 @@ all: ${SRC} ${OBJ} ${EXEC}
 
 ${EXEC}: ${OBJ}
 	${CC} ${LDFLAGS} $^ -o $0
+
+%.o: %.c ${HDR}
+	${CC} ${CFLAGS} $< -o $0
+
+clean:
+	rm *.o ${EXEC}

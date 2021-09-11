@@ -3,6 +3,8 @@
 #include <string.h>
 
 #include "../include/util.h"
+#include "../include/token.h"
+#include "../include/parser.h"
 
 // scut build out.scut
 
@@ -14,7 +16,9 @@ int main(int argc, char** argv) {
 
 	if (strcmp(argv[1], "compile") == 0) {
 		char* source = read_ascii_file(argv[2]);
-    printf("%s\n", source);
+		TokenList* tokens;
+
+		free(tokens);
 		free(source);
 	}
 

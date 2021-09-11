@@ -20,7 +20,6 @@ char* read_ascii_file(const char* path) {
 		return NULL;
 	}
 	fread(buf, 1, size, file);
-	buf[size] = "\0";
 	fclose(file);
 
 	// return contents
